@@ -1,0 +1,164 @@
+<html>
+
+<head>
+  <title>Rrgform</title>
+  <style>
+    button{
+      padding: 10 px;
+      color:rgb(172, 49, 172);
+    }
+    button:active{
+      background-color:aquamarine;
+    }
+    button:hover{
+      background-color: rgb(35, 164, 21);
+    }
+    td {
+      color: green;
+      font-weight: 50px;
+      font-size: large;
+    }
+    input{
+      width: 200px;
+      height: 30px;
+      border-radius: 20px;
+      border: 2px inset cyan;
+      
+
+    }
+
+    input[type="text"] {
+      border-radius: 10px;
+      border: 2px inset cyan;
+    }
+
+    input[type="email"] {
+      border-radius: 20px;
+      border: 2px inset cyan;
+    }
+
+
+    form {
+      background-color: rgb(240, 6, 6);
+      border-radius: 20px;
+      margin: 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    fieldset {
+      margin-left: 140px;
+      margin-right: 140px;
+      background-color: black;
+      border-radius: 20px;
+    }
+
+    .legend1 {
+      color:white;
+      font-size: 40px;
+      font-style: italic;
+    }
+    .td1{
+      color:black;
+      font-size: 21px;
+      padding-right: 1px;
+    }
+    body{
+      background-color:black  ;
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+
+
+  <script>
+    function genOtp() {
+      var val1 = Math.floor(100000 + Math.random() * 900000);
+      document.getElementById("p2").innerHTML = 'Your OTP:';
+      document.getElementById("p").innerHTML = val1;
+      event.preventDefault();
+    }
+    function verify() {
+      var genOtp = document.getElementById("p").innerText;
+      var userOtp = document.getElementById("verify1").value;
+
+      if (genOtp == userOtp) {
+        document.getElementById("abc").innerHTML = "Captcha verified, please Log-In";
+        document.getElementById("abc").style.color="lightgreen";
+
+      }
+      else {
+        document.getElementById("abc").innerHTML = "Invalid captcha,please try again";
+        document.getElementById("abc").style.color="blue";
+
+      }
+      event.preventDefault();
+    }
+  </script>
+
+  <fieldset>
+    <legend class="legend1">Sign-Up</legend>
+    <form>
+
+      <table align="center" cellpadding="15px">
+        <tr>
+          <td align="center">
+            <h2>Join Today!</h2>
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">Enter Name</td>
+          <td><input type="text" name="first_name" placeholder="Enter First Name"></td>
+        </tr>
+        
+        <tr>
+          <td class="td1">Email ID</td>
+          <td><input type="email" name="Email" placeholder="Email ID@gamil.com"></td>
+        </tr>
+        <tr>
+          <td class="td1">Mobile Number</td>
+          <td><input type="number" name="mnum" placeholder="9577xxxxxx"></td>
+        </tr>
+        <tr>
+          <td class="td1">
+            <h3>Verify OTP</h3>
+          </td>
+          <td class="td1">
+            <h4>Click the button to generate 6 digit OTP</h4>
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">
+              <button onclick="genOtp()" type="button">Generate OTP</button>
+          </td>
+        
+          <td class="td1">
+            <h4 id="p2"></h4>
+            <h4 id="p">Your OTP will appear here</h4>
+          </td>
+        <tr>
+          <td class="td1">
+            <label for="verify1">Enter OTP here:</label>
+            <input type="text" placeholder="Enter OTP here" id="verify1">
+          </td>
+        </tr>
+        <tr>
+          <td class="td1" aligb="center"><button onclick="verify()" type="button">Verify OTP</td>
+        </tr>
+        <tr>
+          <td class="td1" align="center">
+            <p id="abc"></p>
+          </td>
+        </tr>
+
+  </fieldset>
+  </form>
+  </table>
+</body>
+
+</html>

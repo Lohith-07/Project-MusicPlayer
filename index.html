@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music-Player</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-   <link rel="shortcut icon" href="Assets/music.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Assets/music.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <nav>
@@ -16,6 +18,13 @@
             </div>
             <div class="details">
                 <p>Music-Player</p>
+                <div class="srch"><img src="Assets/search.svg" alt=""><input type="text" placeholder="Search For A Song"></div>
+                <div class="nav-btn">
+                    <button class="btn">Home</button>
+                    <button class="btn">About</button>
+                    <button class="btn">Contact</button>
+                    <button class="btn">Follow Us</button>
+                </div>
                 <button onclick="Lightbox()"><img src="Assets/darkMode.svg" alt="" id="drk-btn"></button>
             </div>
             <div class="reg-btns">
@@ -23,7 +32,7 @@
                 <button class="reg-btn btn"><a href="reg.html">Register</a></button>
             </div>
         </nav>
-    </header> 
+    </header>
     <aside>
         <ul class="nav-links">
             <li><img src="Assets/trndg.svg" alt=""> <a href="">Trending Now</a></li>
@@ -31,8 +40,21 @@
             <li><img src="Assets/genz.svg" alt=""><a href="">Gen-Z Music</a></li>
             <li><img src="Assets/new.svg" alt=""><a href="">New Arrivals</a></li>
             <li><img src="Assets/kids.svg" alt=""><a href="">Kids Music</a></li>
+            <li><img src="Assets/playlist.svg" alt=""><a href="">Playlists</a></li>
         </ul>
-    </aside>   
-    <footer></footer>
+    </aside>
+    <footer>
+        <div class="sng-nm">
+            <p>Now Playing</p>
+            <h2 id="song-name">Song Name</h2>
+        </div>
+        <div class="btns">
+            <button class="prev-btn btn" onclick="prev()"><img src="Assets/prev.svg" alt=""></button>
+            <button class="ply-btn btn" onclick="play()"><img src="Assets/play.svg" alt=""></button>
+            <button class="nxt-btn btn" onclick="nxt()"><img src="Assets/next.svg" alt=""></button>
+        </div>
+        <div class="sng-len"></div>
+    </footer>
 </body>
+
 </html>

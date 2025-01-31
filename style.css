@@ -2,6 +2,9 @@ body{
     background-color: rgb(31, 31, 31);
     color:white;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 .bg-light{
     background-color: rgba(0, 0, 0, 0.13) ;
     color: black;;
@@ -10,6 +13,8 @@ nav{
     height:12vh;
     width:100%;
     display: flex;
+    position: sticky;
+    top:0;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.13);
     gap:50px;
@@ -32,7 +37,37 @@ nav{
     margin-left: 10px;
     height: 80%;
 }
-
+.details .srch {
+    display: flex;
+    gap: 5px;
+    /* background-color: aqua; */
+    width: 25%;
+}
+::placeholder{
+    color:red;
+    font-weight: 900;
+    font-size:15px; 
+}
+.details .srch img{
+    height: 4vh;
+    width: 6vh;
+    cursor: pointer;
+}
+.details .nav-btn button{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.13);
+    border-radius: 50%;
+    border-radius:5px;
+    padding: 0px;
+    margin: 0px;
+    height: 36px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.details .nav-btn button:hover{
+    color: red;
+    transform: scale(1.1);
+}
 .details button{
     color: white;
     border-radius: 50%;
@@ -106,7 +141,31 @@ li{
 }
 footer{
     height: 12.8vh;
+    width:100%;
     background-color: rgba(0, 0, 0, 0.13);
     box-shadow: 5px 0px 8px -1px rgb(255, 255, 255);
-    border:1px solid white
+    border:1px solid white;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+footer .btns{
+    display: flex;
+    gap: 20px;
+    /* margin-left: 20px; */
+}
+footer .btns button{
+    width: 7vw;
+    height: 6vh;
+    border-radius: 20px;
+    /* font-weight: bolder; */
+    border:2px solid rgba(0, 0, 0);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.13);
 }

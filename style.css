@@ -6,7 +6,7 @@ body{
     display: none;
 }
 .bg-light{
-    background-color: rgba(0, 0, 0, 0.13) ;
+    background-color: rgba(0, 0, 0, 0.048) ;
     color: black;;
 }
 nav{
@@ -45,7 +45,7 @@ nav{
 }
 ::placeholder{
     color:red;
-    font-weight: 900;
+    font-weight: 500;
     font-size:15px; 
 }
 .details .srch img{
@@ -60,7 +60,7 @@ nav{
     border-radius:5px;
     padding: 0px;
     margin: 0px;
-    height: 36px;
+    /* height: 36px; */
     font-size: 20px;
     cursor: pointer;
 }
@@ -113,6 +113,8 @@ aside{
     height: 73vh;
     background-color: rgba(0, 0, 0, 0.13);
     display: flex;
+    float: left;
+    position: fixed;
     /* flex-direction: column; */
     font-size: 28px;
 }
@@ -138,6 +140,14 @@ li{
     align-items: center;
     width:15vw;
     gap:15px;
+}
+.home{
+    float: right;
+    height: 72vh;
+    width:79vw;
+    position: fixed;
+    right:0;
+    background-color: rgba(219, 218, 218, 0.13);
 }
 footer{
     height: 12.8vh;

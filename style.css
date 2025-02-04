@@ -1,3 +1,8 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: rgb(31, 31, 31);
     color:white;
@@ -13,13 +18,15 @@ nav{
     height:12vh;
     width:100%;
     display: flex;
-    position: sticky;
-    top:0px;
+    position: fixed;
+    top:0;
+    z-index: 1000;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.13);
     gap:50px;
     border: white 1px solid;
-    box-shadow: 1px 3px 3px rgb(76, 51, 51);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 .logo img{
     height:100%;
@@ -114,16 +121,18 @@ aside{
     display: flex;
     float: left;
     position: fixed;
-    /* left:0; */
-    /* bottom:15vh; */
+    left:0;
+    align-items: center;
+    justify-content: center;
+    top: 12.5vh;
     font-size: 28px;
+    overflow-y: auto;
 }
 ul{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6vh;
-    margin-top: 10vh;
 }
 ul li img{
     height:5vh;
@@ -145,12 +154,11 @@ footer{
     height: 12.8vh;
     width:100%;
     background-color: rgba(0, 0, 0,0.13);
-    box-shadow: 5px 0px 8px -1px rgb(255, 255, 255);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     border:1px solid white;
     display: flex;
     position: fixed;
     bottom: 0;
-    left: 0; 
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
@@ -176,28 +184,36 @@ footer .btns button{
     float: right;
     padding:10px;
     background-color: rgba(0, 0, 0, 0.13);
+    margin-top: 12.5vh; /* Same as navbar height + some space */
+    /* margin-left: 300px; */
+    margin-bottom: 60px; /* Same as footer height + some space */
+    padding: 20px;
+    overflow: auto;
+    height: 68vh;
+    width:78.9vw;
 }
 .home{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    height: 72vh;
-    width:78.9vw;
-    /* padding: 25px; */
-    /* background-color: rgba(0, 0, 0, 0.13); */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .card{
-    height: 30vh;
+    height: 35vh;
     margin:15px;
-    width:10vw;
+    width:12vw;
     border: 4px solid red;
     border-radius: 20px;
     /* background-color: red; */
     padding:10px;
     /* z-index: -1; */
     text-align: center;
+    transition: transform 0.2s ease-in-out;
 }
 .card img{
     height: 20vh;
     width:10vw;
     border-radius: 20px;
+}
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }

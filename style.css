@@ -14,7 +14,7 @@ nav{
     width:100%;
     display: flex;
     position: sticky;
-    top:0;
+    top:0px;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.13);
     gap:50px;
@@ -54,7 +54,7 @@ nav{
     cursor: pointer;
 }
 .details .nav-btn button{
-    color: white;
+    color: red;
     background-color: rgba(0, 0, 0, 0.13);
     border-radius: 50%;
     border-radius:5px;
@@ -65,7 +65,7 @@ nav{
     cursor: pointer;
 }
 .details .nav-btn button:hover{
-    color: red;
+
     transform: scale(1.1);
 }
 .details button{
@@ -114,8 +114,9 @@ aside{
     background-color: rgba(0, 0, 0, 0.13);
     display: flex;
     float: left;
-    position: fixed;
-    /* flex-direction: column; */
+    /* position: fixed; */
+    /* left:0; */
+    /* bottom:15vh; */
     font-size: 28px;
 }
 ul{
@@ -144,10 +145,10 @@ li{
 .home{
     float: right;
     height: 72vh;
-    width:79vw;
-    position: fixed;
+    width:78.9vw;
+    /* position: fixed;  */
     right:0;
-    background-color: rgba(219, 218, 218, 0.13);
+    background-color: rgba(219, 218, 28, 0.13);
 }
 footer{
     height: 12.8vh;

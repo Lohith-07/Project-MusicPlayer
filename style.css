@@ -115,7 +115,7 @@ a{
     color: inherit;
 }
 aside{
-    width: 18vw;
+    width: 18.5vw;
     height: 73vh;
     background-color: rgba(0, 0, 0, 0.13);
     display: flex;
@@ -137,11 +137,15 @@ ul{
 ul li img{
     height:5vh;
 }
+.nav-links a{
+    transition: all 0.5s ease-in-out;
+}
+.nav-links a:hover{
+    color: red;
+    opacity: 1;
+}
 .invert{
     filter: invert(1);
-}
-a:hover{
-    color: red;
 }
 li{
     list-style-type: none;

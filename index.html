@@ -7,6 +7,8 @@
     <title>Music-Player</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Assets/music.png" type="image/x-icon">
+    <!-- <script src="songs.js"></script> -->
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -59,7 +61,7 @@
             </div>
             <div class="card">
                 <div class="song-img">
-                    <img src="" alt="">
+                    <img src="Songs/Daaku Maharaj/[iSongs.info] 01 - Daaku The Into.jpg" alt="">
                 </div>
                 <div class="info">
                     <p>Song Name</p>
@@ -268,19 +270,20 @@
         </div>
     </div>
     <footer>
+        <audio src="" id="audio-player">
+
+        </audio>
         <div class="sng-nm">
             <p>Now Playing</p>
             <h2 id="song-name">Song Name</h2>
         </div>
         <div class="btns">
-            <button class="prev-btn btn" onclick="prev()"><img src="Assets/prev.svg" alt=""></button>
-            <button class="ply-btn btn" onclick="play()"><img src="Assets/play.svg" alt=""></button>
-            <button class="nxt-btn btn" onclick="nxt()"><img src="Assets/next.svg" alt=""></button>
+            <button class="prev-btn btn" onclick="prevSong()"><img src="Assets/prev.svg" alt=""></button>
+            <button class="ply-btn btn" onclick="playSong()"><img src="Assets/play.svg" alt=""></button>
+            <button class="nxt-btn btn" onclick="nextSong()"><img src="Assets/next.svg" alt=""></button>
         </div>
         <div class="sng-len"></div>
     </footer>
-    <script src="songs.js"></script>
-    <script src="script.js"></script>
+   
 </body>
-
 </html>

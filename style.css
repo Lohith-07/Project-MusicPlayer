@@ -4,14 +4,14 @@
     padding: 0;
 }
 body{
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(0, 0, 0);
     color:white;
 }
 ::-webkit-scrollbar {
     display: none;
 }
 .bg-light{
-    background-color: rgba(0, 0, 0, 0.048) ;
+    background-color: rgba(0, 0, 0, 0) ;
     color: black;;
 }
 nav{
@@ -22,7 +22,7 @@ nav{
     top:0;
     z-index: 1000;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0,0.01);
     gap:50px;
     border: white 1px solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -62,7 +62,7 @@ nav{
 }
 .details .nav-btn button{
     color: red;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0, 0.01);
     border-radius: 50%;
     border-radius:5px;
     padding: 0px;
@@ -117,7 +117,7 @@ a{
 aside{
     width: 18.5vw;
     height: 73vh;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0, 0.01);
     display: flex;
     float: left;
     position: fixed;
@@ -157,7 +157,7 @@ li{
 footer{
     height: 12.8vh;
     width:100%;
-    background-color: rgba(0, 0, 0,0.13);
+    background-color: rgba(0, 0, 0,0.01);
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     border:1px solid white;
     display: flex;
@@ -182,12 +182,12 @@ footer .btns button{
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0, 0.01);
 }
 .main{
     float: right;
     padding:10px;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0, 0.01);
     margin-top: 12.5vh; /* Same as navbar height + some space */
     /* margin-left: 300px; */
     margin-bottom: 60px; /* Same as footer height + some space */
@@ -198,12 +198,12 @@ footer .btns button{
 }
 .home{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .card{
-    height: 35vh;
+    height: 45vh;
     margin:15px;
-    width:12vw;
+    width:15vw;
     border: 4px solid red;
     border-radius: 20px;
     /* background-color: red; */
@@ -213,8 +213,8 @@ footer .btns button{
     transition: transform 0.2s ease-in-out;
 }
 .card img{
-    height: 20vh;
-    width:10vw;
+    height: 30vh;
+    width:13vw;
     border-radius: 20px;
 }
 .play-btn {
@@ -251,10 +251,10 @@ footer .btns button{
     height: 10vh;
 }
 .info p{
-    font-size: 20px;
+    font-size: 24px;
 }
 .info span{
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 10px;
 }
 .card:hover {

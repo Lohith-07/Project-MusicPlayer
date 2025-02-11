@@ -218,24 +218,28 @@ footer .btns button{
     border-radius: 20px;
 }
 .play-btn {
-    height: 5vh;
+    height: 5.5vh;
     text-align: right;
-    /* background-color: rgb(0, 0, 0); */
+    /* background-color: rgb(25,25, 255); */
     opacity: 0;
-    width: 11vw;
+    width: 94%;
+    text-align: right;
+    z-index: 999;
+    overflow: auto;
+    transition: all 0.5s ease-in-out;
     position: relative;
     top: -14vh;
-    
 }
 .play-btn button{
     border-radius: 50%;
     height:5vh;
     width:5vh;
-    outline: 2px solid grey;
+    cursor: pointer;
     
 }
 .play-btn:hover{
     opacity: 1;
+
 }
 .play-btn img{
     height: 5vh;

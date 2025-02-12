@@ -1,108 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MusicPlayer-Register</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      background-image: url(Assets/deskBG.jpg);
-      background-position: center center;
-      margin-top: 5vh;
-    }
-    h1 {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicPlayer-SignIn</title>
+    <style>
+      body {
+        display:flex;
+        align-content: center;
+        justify-content: center;
+        background-image: url(Assets/0001_4_a-cinematic-medium-shot-of-a-futuristic-_wJnmDuj-S9yrC9I93eAe9g_LP_O_51CRw-fz-m0M7ru5w_cover.jpeg);
+        background-position: center;
+        margin-top: 5vh;
+        background-size: cover;
+      }
+      h1 {
       font-size: 40px;
       font-weight: 900;
       color: midnightblue;
-      background-color: lightskyblue;
-    }
-    .container {
-      /* background-color: black; */
-      height: 90vh;
-      width: 50vw;
-      border-radius: 10%;
-      box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.5);
-    }
+      background-color: rgb(19, 170, 130);
+      margin-top:15vh;
 
-    .left {
-      background-color: rgb(39, 38, 38);
-      /* filter: opacity(0.8); */
-      height: 90vh;
-      width: 25vw;
-      border-radius: 40px 0px 0px 40px;
-      float: left;
-      text-align: center;
-      color: midnightblue;
     }
-
-    .left-cnt {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .left-cnt input {
-      height: 25px;
-      width: 80%;
+      .container {
+        /* background-color: black; */
+        height: 90vh;
+        width: 50vw;
+        border-radius: 10%;
+      }
+      .right {
+        background-color: rgb(39, 38, 38);
+        filter: opacity(0.9);
+        height: 90vh;
+        width: 25vw;
+        border-radius: 0px 40px 40px 40px;
+        float: left;
+        text-align: center;
+      }
+      .right-cnt{
+        position:absolute;
+        left: 20px;
+         display: flex;
+         flex-direction: column;
+         gap:1rem;
+         align-items: center;
+      }
+      .right-cnt input {
+      height: 3vh;
+      width:100%;
       border-radius: 10px;
       border: none;
       padding: 10px;
-      font-size: 20px;
+      font-size: 1.5vmax;
     }
-
-    .right {
-      height: 90vh;
-      width: 25vw;
-      float: right;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .right img {
-      height: 90vh;
-      width: 25vw;
-      border-radius: 0px 40px 40px 0px;
-    }
-
-    .otp p {
-      background-color: lightskyblue;
-      padding: 5px;
-      font-weight: 900;
-      width:50%;
-      border-radius: 10px;
-    }
-
-    .otp {
-      /* background-color: aliceblue; */
-      width: 80%;
-      height: 50px;
-      display: flex;
-      font-size: 24px;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .verify-otp {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      gap: 10px;
-    }
-
-    .verify-otp input {
-      height: 25px;
-      width: 50%;
-      border-radius: 10px;
-      border: none;
-      padding: 5px;
-      font-size: 20px;
-    }
+      .right {
+        height: 90vh;
+        width: 25vw;
+        float: right;
+        display: flex;
+        flex-direction: column;
+      }
+      .left img {
+        height: 90vh;
+        width: 25vw;
+        border-radius:40px 0px 0px 40px;
+      }
 
     button {
       height: 40px;
@@ -113,74 +75,38 @@
       color: white;
       font-size: 16px;
       cursor: pointer;
-      font-weight: 500;
     }
 
     #rgst-nw {
       margin-top: 30px;
-      width: 60%;
+      width: 6vw;
       height: 50px;
       font-size: 24px;
-      /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    }
-  </style>
-  <script>
-    function genOtp() {
-      alert("OTP Generated");
-      var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-      var otp = "";
-      for (var i = 0; i < 6; i++) {
-        otp += a[Math.floor(Math.random() * 10)];
-      }
-      document.getElementById("otp").innerHTML = otp;
-    }
-    function validate() {
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var phone = document.getElementById("phone").value;
-      var password = document.getElementById("password").value;
-      var otp = document.getElementById("otp").innerHTML;
-      if (name == "" || email == "" || phone == "" || password == "" || otp == "OTP") {
-        alert("Please fill all the fields");
-      }
-      else {
-        alert("Registration Successful");
-      }
-      location.href = "index.html";
-    }
-    function verifyOtp() {
-      var otp = document.getElementById("otp").innerHTML;
-      var userOtp = document.getElementById("userOtp").value;
-      if (otp == userOtp) {
-        alert("OTP Verified");
-      }
-      else {
-        alert("Invalid OTP");
-      }
-    }
-  </script>
-</head>
+   
+    } 
 
-<body>
-  <div class="container">
-    <div class="left">
-      <h1>Registration Form</h1>
-      <div class="left-cnt">
-        <input type="text" id="name" placeholder="Enter Your Name" />
-        <input type="email" name="" id="email" placeholder="Enter Your Email" />
-        <input type="tel" name="" id="phone" placeholder="Enter Your Phone Number" />
-        <input type="password" name="" id="password" placeholder="Enter Password" />
-        <div class="otp">
-          <p id="otp">OTP</p><button onclick="genOtp()" type="button">Generate OTP</button>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="right">
+        <div class="right-cnt">
+          <h1>SignIn Form</h1>
+          <input type="text" placeholder="Enter Your Name" / id="pad">
+          <input type="email" name="" id="pad" placeholder="Enter Your Email" />
+          <input type="password" name="" id="pad" placeholder="Enter Password" />
+          <div>
+            <button type="submit" name="Log In" id="rgst-nw" onclick="
+              alert('loggged in Successfully');
+              open('index.html')
+              ">LogIn</button>
+          </div>
+          <div>
+            <a href="">Forget pasword</a>
+          </div>
         </div>
-        <div class="verify-otp"><input type="text" placeholder="Enter OTP" id="userOtp"><button onclick="verifyOtp()"
-            type="button">Verify OTP</button></div>
       </div>
-      <hr color="midnightblue" / width="90%">
-      <button onclick="validate()" id="rgst-nw">Register Now</button>
+      <div class="left"><img src="Assets/anime-boy2.jpg" alt="image1"></div>
     </div>
-    <div class="right"><img src="Assets/anime-grl.jpg" alt="" /></div>
-  </div>
-</body>
-
+  </body>
 </html>

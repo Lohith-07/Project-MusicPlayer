@@ -126,7 +126,6 @@
   </style>
   <script>
     function genOtp() {
-      alert("OTP Generated");
       var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
       var otp = "";
       for (var i = 0; i < 6; i++) {
@@ -145,8 +144,8 @@
       }
       else {
         alert("Registration Successful");
+        location.href = "index.html";
       }
-      location.href = "index.html";
     }
     function verifyOtp() {
       var otp = document.getElementById("otp").innerHTML;

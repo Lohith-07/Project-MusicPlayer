@@ -17,6 +17,7 @@ const songs=[
         img: 'img2',
         src: 'Songs/Guntur Karam/Kurchi Madathapetti.mp3'
     },
+    
     {
         title: 'Chuttamalle',
         artist: 'artist3',
@@ -24,8 +25,14 @@ const songs=[
         src: 'Songs/Devara (2024)/Chuttamalle.mp3'
     }
 ]
+function playCard(src,title){
+    let audio=document.getElementById('audio-player');
+    audio.src=src;
+    audio.play();
+    console.log(src);
+}
 let songId=0;
-function loadSong(songId){
+function loadSong(src){
     let song=songs[songId];
     let title=document.getElementById('song-name');
     let audio=document.getElementById('audio-player');

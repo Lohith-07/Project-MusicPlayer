@@ -196,6 +196,17 @@ footer .btns button{
     height: 68vh;
     width:78.9vw;
 }
+.rotate{
+    transition: all 0.5s ease-in-out;
+    transform: rotate(180deg);
+    animation: rot 10s ease 1s infinite forwards;
+    cursor: pointer;
+}
+@keyframes rot {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    
+}
 .home{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

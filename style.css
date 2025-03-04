@@ -3,9 +3,17 @@
     margin: 0;
     padding: 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Rubik+Distressed&display=swap');
+
 body{
     background-color: rgb(0, 0, 0);
     color:white;
+    /* font-family: 'Orbitron', sans-serif; */
 }
 ::-webkit-scrollbar {
     display: none;
@@ -41,6 +49,7 @@ nav{
     height:40px;
     justify-content: space-between;
     align-items: center;
+    font-family:'Poppins', sans-serif;
     margin-left: 10px;
     height: 80%;
 }
@@ -122,6 +131,7 @@ aside{
     float: left;
     position: fixed;
     left:0;
+    font-family: 'orbitron', sans-serif;
     align-items: center;
     justify-content: center;
     top: 12.5vh;
@@ -188,13 +198,21 @@ footer .btns button{
     float: right;
     padding:10px;
     background-color: rgba(0, 0, 0, 0.01);
-    margin-top: 12.5vh; /* Same as navbar height + some space */
-    /* margin-left: 300px; */
-    margin-bottom: 60px; /* Same as footer height + some space */
+    margin-top: 12.5vh; 
+    margin-bottom: 60px; 
     padding: 20px;
     overflow: auto;
     height: 68vh;
     width:78.9vw;
+}
+.main h1{
+    font-family:'Rubik Distressed', sans-serif;
+}
+#caption{
+    font-size: 28px;
+    font-family:'Goldman', cursive;
+    /* text-align: center; */
+    margin-top: 10px;
 }
 .rotate{
     transition: all 0.5s ease-in-out;
@@ -267,10 +285,12 @@ footer .btns button{
 }
 .info p{
     font-size: 24px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 .info span{
     font-size: 18px;
     margin-top: 10px;
+    font-family: 'Metamorphous', cursive;
 }
 .card:hover {
     transform: scale(1.05);

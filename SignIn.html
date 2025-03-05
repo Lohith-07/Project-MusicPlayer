@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicPlayer-SignIn</title>
+    <style>
+      body {
+        display:flex;
+        align-content: center;
+        justify-content: center;
+        background-image: url(Assets/0001_4_a-cinematic-medium-shot-of-a-futuristic-_wJnmDuj-S9yrC9I93eAe9g_LP_O_51CRw-fz-m0M7ru5w_cover.jpeg);
+        background-position: center;
+        margin-top: 5vh;
+        background-size: cover;
+      }
+      h1 {
+      font-size: 50px;
+      font-weight: 900;
+      color: midnightblue;
+      background-color: rgb(19, 170, 130);
+      margin-top:15vh;
+      background-size: cover;
+    }
+      .container {
+        /* background-color: black; */
+        height: 90vh;
+        width: 50vw;
+        border-radius: 10%;
+      }
+      .right {
+        background-color: rgb(39, 38, 38);
+        filter: opacity(0.9);
+        height: 90vh;
+        width: 25vw;
+        border-radius: 0px 40px 40px 0px;
+        float: left;
+        text-align: center;
+      }
+      .right-cnt{
+        position:absolute;
+        left: 20px;
+         display: flex;
+         flex-direction: column;
+         gap:1rem;
+         align-items: center;
+      }
+      .right-cnt input {
+      height: 3vh;
+      width:100%;
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      font-size: 1.5vmax;
+    }
+      .right {
+        height: 90vh;
+        width: 25vw;
+        float: right;
+        display: flex;
+        flex-direction: column;
+      }
+      .left img {
+        height: 90vh;
+        width: 25vw;
+        border-radius:40px 0px 0px 40px;
+      }
+
+    button {
+      height: 40px;
+      width: 30%;
+      border-radius: 10px;
+      border: none;
+      background-color: midnightblue;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      opacity: 1;
+    }
+    button:hover{
+      color:aquamarine;
+    }
+    a:hover{
+      color: aqua;
+    }
+
+    #rgst-nw {
+      margin-top: 30px;
+      width: 6vw;
+      height: 50px;
+      font-size: 24px;
+   
+    } 
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="right">
+        <div class="right-cnt">
+          <h1>SignIn Form</h1>
+          <input type="text" placeholder="Enter Your Name" / id="pad">
+          <input type="email" name="" id="pad" placeholder="Enter Your Email" />
+          <input type="password" name="" id="pad" placeholder="Enter Password" />
+          <div>
+            <button type="submit" name="Log In" id="rgst-nw" onclick="
+              alert('loggged in Successfully');
+              open('index.html')
+              ">LogIn</button>
+          </div>
+          <div>
+            <a href="">Forget pasword</a>
+          </div>
+        </div>
+      </div>
+      <div class="left"><img src="Assets/anime-boy2.jpg" alt="image1"></div>
+    </div>
+  </body>
+</html>

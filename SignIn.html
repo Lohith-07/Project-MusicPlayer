@@ -91,22 +91,31 @@
       font-size: 24px;
    
     } 
-
     </style>
+    <script>
+      function validate() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        if (email == "student12345@gmail.com" && password == "12345") {
+          alert("Login Successfully");
+          location.href= "index.html";
+        }
+        else{
+          alert("Invalid Email or Password");
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="container">
       <div class="right">
         <div class="right-cnt">
           <h1>SignIn Form</h1>
-          <input type="text" placeholder="Enter Your Name" / id="pad">
-          <input type="email" name="" id="pad" placeholder="Enter Your Email" />
-          <input type="password" name="" id="pad" placeholder="Enter Password" />
+          <input type="text" placeholder="Enter Your Name" / id="name">
+          <input type="email" name="" id="email" placeholder="Enter Your Email" />
+          <input type="password" name="" id="password" placeholder="Enter Password" />
           <div>
-            <button type="submit" name="Log In" id="rgst-nw" onclick="
-              alert('loggged in Successfully');
-              open('index.html')
-              ">LogIn</button>
+            <button type="submit" name="Log In" id="rgst-nw" onclick="validate()">LogIn</button>
           </div>
           <div>
             <a href="">Forget pasword</a>

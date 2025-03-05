@@ -32,7 +32,7 @@ function playCard(src,title){
     console.log(src);
 }
 let songId=0;
-function loadSong(src){
+function loadSong(songId){
     let song=songs[songId];
     let title=document.getElementById('song-name');
     let audio=document.getElementById('audio-player');
@@ -53,16 +53,17 @@ function prevSong(){
 function playSong(){
     let audio=document.getElementById('audio-player');
     let play=document.getElementById('ply-btn');
+    
     // let img=document.getElementById('img');
     if(audio.paused){
         loadSong(songId);
         audio.play();
-        play.src='Assets/pause.svg';
+        play.innerHTML=`<img src="Assets/pause.svg" alt="Pause">`;
         // img.classList.add('rotate');
     }else{
         loadSong(songId);
         audio.pause();
-        play.src='Assests/play.svg';
+        play.innerHTML=`<img src="Assets/play.svg" alt="Play">`;;
         // img.classList.remove('rotate');
     }
 }
